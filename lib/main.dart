@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ronald_dela_cruz_profolio/home_page.dart';
+import 'package:ronald_dela_cruz_portfolio/home_page.dart';
 
 void main() {
   runApp(const MyPortfolioApp());
@@ -19,13 +19,39 @@ class MyPortfolioApp extends StatelessWidget {
           secondary: Color(0xFFBB86FC), // Purple accent color
         ),
         textTheme: const TextTheme(
-          bodyLarge: TextStyle(color: Colors.white70),
-          bodySmall: TextStyle(color: Colors.white60),
+          bodyLarge: TextStyle(
+            fontFamily: 'Roboto',
+            fontSize: 18,
+            color: Colors.white70,
+          ),
+          bodySmall: TextStyle(
+            fontFamily: 'Roboto',
+            fontSize: 14,
+            color: Colors.white60,
+          ),
+          displayLarge: TextStyle(
+            fontFamily: 'Roboto',
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+          displayMedium: TextStyle(
+            fontFamily: 'Roboto',
+            fontSize: 28,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+          labelLarge: TextStyle(
+            fontFamily: 'Roboto',
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            foregroundColor: Colors.black,
-            backgroundColor: const Color(0xFFBB86FC), // Text color
+            foregroundColor: Colors.black, // Text color
+            backgroundColor: const Color(0xFFBB86FC), // Button background color
           ),
         ),
       ),
