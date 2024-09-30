@@ -59,7 +59,7 @@ class MyPortfolioApp extends StatelessWidget {
       routes: {
         '/': (context) => const PortfolioHomePage(),
         '/about': (context) => const AboutPage(),
-        '/skills': (context) => const SkillsPage(),
+        '/skills': (context) => SkillsPage(),
         '/contact': (context) => const ContactPage(),
       },
     );

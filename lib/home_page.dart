@@ -66,7 +66,7 @@ class HeaderSection extends StatelessWidget {
         children: [
           const CircleAvatar(
             radius: 50,
-            backgroundImage: AssetImage('assets/avatar.jpg'),
+            backgroundImage: AssetImage('assets/images/profilepic.jpg'),
           ),
           const SizedBox(height: 20),
           const Text(
@@ -79,7 +79,7 @@ class HeaderSection extends StatelessWidget {
             ),
           ),
           const Text(
-            'Flutter Developer',
+            'Senior Flutter Developer',
             style: TextStyle(
               fontSize: 24,
               color: Colors.white70,
@@ -121,7 +121,7 @@ class HeaderSection extends StatelessWidget {
                   case '/about':
                     return const AboutPage();
                   case '/skills':
-                    return const SkillsPage();
+                    return SkillsPage();
                   case '/contact':
                     return const ContactPage();
                   default:
@@ -177,21 +177,25 @@ class AboutSection extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Text(
-            'I am a Flutter developer with experience in building beautiful, scalable, and efficient mobile and web applications.',
+            '''I am Ronald A. Dela Cruz, a Junior Flutter Developer with extensive experience in building mobile and web applications for both Android and iOS. My career objective is to secure a responsible position with a progressive firm that will utilize my skills and experience while providing growth opportunities.''',
             style: TextStyle(
               fontSize: 18,
               color: Theme.of(context).textTheme.bodyLarge?.color,
               fontFamily: 'Roboto',
             ),
           ),
-          const SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: () => Navigator.pushNamed(context, '/about'),
-            child: const Text(
-              'Learn More',
-              style: TextStyle(
-                fontFamily: 'Roboto',
-              ),
+          const SizedBox(height: 10),
+          Text(
+            '''Personal Info:
+Nationality: Filipino
+Height: 5’8"
+Weight: 140 lbs
+Location: Me Aplaya del Sol St., Julugan 1, Tanza, Cavite (4108)
+Mobile: 09055935273 (Globe) / 09304895819 (Smart)''',
+            style: TextStyle(
+              fontSize: 16,
+              color: Theme.of(context).textTheme.bodyLarge?.color,
+              fontFamily: 'Roboto',
             ),
           ),
         ],
@@ -205,32 +209,27 @@ class SkillsSection extends StatelessWidget {
     {
       'name': 'Flutter & Dart',
       'description':
-          'Experienced in crafting highly responsive and scalable cross-platform applications using Flutter and Dart. Capable of building intuitive, performant, and visually engaging mobile and web interfaces with native-like experiences across both Android and iOS. Expert in leveraging Flutter’s widget tree for smooth animations and efficient UI updates.'
+          'Expert in Flutter and Dart for creating cross-platform mobile applications with performance optimization.'
     },
     {
       'name': 'State Management',
       'description':
-          'Proficient in managing state across complex applications using industry-standard tools such as Provider and Riverpod. Skilled in structuring scalable architectures that ensure clean, maintainable codebases, supporting both small-scale and enterprise-level apps.'
+          'Proficient with state management solutions like Provider and Riverpod.'
     },
     {
-      'name': 'Firebase',
+      'name': 'API Integration',
       'description':
-          'Well-versed in integrating Firebase for backend services, including authentication, Firestore, real-time database, cloud functions, and push notifications. Adept at creating secure, dynamic applications with seamless cloud integration, leveraging Firebase for real-time syncing and scalable back-end solutions.'
-    },
-    {
-      'name': 'REST APIs',
-      'description':
-          'Experienced in building applications that consume RESTful web services to enable communication between frontend interfaces and backend servers. Strong understanding of HTTP requests, error handling, and parsing JSON data into Flutter models to build robust, data-driven applications.'
+          'Skilled in integrating RESTful APIs into Flutter apps for smooth communication with servers.'
     },
     {
       'name': 'UI/UX Design',
       'description':
-          'Focused on delivering user-centric designs with attention to UI/UX principles. Able to translate designs into highly functional, visually appealing layouts. Skilled in leveraging Flutter’s Material Design and Cupertino widgets, ensuring seamless navigation, responsive layouts, and smooth animations for superior user experience.'
+          'Focused on delivering intuitive and user-friendly UI/UX designs.'
     },
     {
-      'name': 'Version Control & Collaboration',
+      'name': 'Version Control (Git)',
       'description':
-          'Proficient in using Git for version control and collaborating with teams via platforms like GitHub. Familiar with CI/CD pipelines for automated testing and deployment, ensuring high-quality code and smooth releases.'
+          'Experienced in version control with Git and collaborating on platforms like GitHub.'
     },
   ];
 
@@ -308,36 +307,29 @@ class ContactSection extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Text(
-            'Email: johndoe@example.com',
+            'Email: boedelacruz@gmail.com',
             style: TextStyle(
-                fontSize: 18,
-                color: Theme.of(context).textTheme.bodyLarge?.color,
-                fontFamily: 'Roboto'),
+              fontSize: 18,
+              color: Theme.of(context).textTheme.bodyLarge?.color,
+              fontFamily: 'Roboto',
+            ),
           ),
           const SizedBox(height: 5),
           Text(
-            'LinkedIn: linkedin.com/in/johndoe',
+            'LinkedIn: linkedin.com/in/ronald-dela-cruz-5b72a7319',
             style: TextStyle(
-                fontSize: 18,
-                color: Theme.of(context).textTheme.bodyLarge?.color,
-                fontFamily: 'Roboto'),
+              fontSize: 18,
+              color: Theme.of(context).textTheme.bodyLarge?.color,
+              fontFamily: 'Roboto',
+            ),
           ),
           const SizedBox(height: 5),
           Text(
-            'GitHub: github.com/johndoe',
+            'Mobile: 09055935273 (Globe) / 09304895819 (Smart)',
             style: TextStyle(
-                fontSize: 18,
-                color: Theme.of(context).textTheme.bodyLarge?.color,
-                fontFamily: 'Roboto'),
-          ),
-          const SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: () => Navigator.pushNamed(context, '/contact'),
-            child: const Text(
-              'Get in Touch',
-              style: TextStyle(
-                fontFamily: 'Roboto',
-              ),
+              fontSize: 18,
+              color: Theme.of(context).textTheme.bodyLarge?.color,
+              fontFamily: 'Roboto',
             ),
           ),
         ],
@@ -346,123 +338,6 @@ class ContactSection extends StatelessWidget {
   }
 }
 
-// Sample pages
-
-class AboutPage extends StatelessWidget {
-  const AboutPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('About Me'),
-        backgroundColor: Theme.of(context).primaryColor,
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'About Me - Full Details',
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                color: Theme.of(context).colorScheme.secondary,
-                fontFamily: 'Roboto',
-              ),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              'I am a passionate Flutter developer with experience in building high-quality mobile and web applications.',
-              style: TextStyle(
-                fontSize: 18,
-                color: Theme.of(context).textTheme.bodyLarge?.color,
-                fontFamily: 'Roboto',
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class SkillsPage extends StatelessWidget {
-  const SkillsPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Skills'),
-        backgroundColor: Theme.of(context).primaryColor,
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'My Skills',
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                color: Theme.of(context).colorScheme.secondary,
-                fontFamily: 'Roboto',
-              ),
-            ),
-            const SizedBox(height: 10),
-            // Repeat the skills list here
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class ContactPage extends StatelessWidget {
-  const ContactPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Contact'),
-        backgroundColor: Theme.of(context).primaryColor,
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Get in Touch',
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                color: Theme.of(context).colorScheme.secondary,
-                fontFamily: 'Roboto',
-              ),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              'Feel free to reach out to me via email or connect with me on LinkedIn.',
-              style: TextStyle(
-                fontSize: 18,
-                color: Theme.of(context).textTheme.bodyLarge?.color,
-                fontFamily: 'Roboto',
-              ),
-            ),
-            const SizedBox(height: 20),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-// Skill Detail Page
 class SkillDetailPage extends StatelessWidget {
   final String skillName;
   final String skillDescription;
@@ -508,6 +383,205 @@ class SkillDetailPage extends StatelessWidget {
                 fontFamily: 'Roboto',
               ),
             ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class AboutPage extends StatelessWidget {
+  const AboutPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('About Me'),
+        backgroundColor: Theme.of(context).primaryColor,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'About Me - Full Details',
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Theme.of(context).colorScheme.secondary,
+                fontFamily: 'Roboto',
+              ),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              '''I am a passionate Flutter developer with extensive experience in creating high-quality mobile and web applications for both Android and iOS platforms. With my skills in Dart and Flutter, I focus on building efficient, scalable, and visually appealing applications that provide excellent user experiences.''',
+              style: TextStyle(
+                fontSize: 18,
+                color: Theme.of(context).textTheme.bodyLarge?.color,
+                fontFamily: 'Roboto',
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class SkillsPage extends StatelessWidget {
+  SkillsPage({super.key});
+
+  final List<Map<String, String>> skills = [
+    {
+      'name': 'Flutter & Dart',
+      'description':
+          'Expert in Flutter and Dart for creating cross-platform mobile applications with performance optimization. Developed multiple successful projects, including an e-commerce app and a social media platform that achieved over 10,000 downloads.'
+    },
+    {
+      'name': 'State Management',
+      'description':
+          'Proficient with state management solutions like Provider, Riverpod, and GetX, enabling efficient data flow and state management in complex applications.'
+    },
+    {
+      'name': 'API Integration',
+      'description':
+          'Skilled in integrating RESTful APIs and GraphQL into Flutter apps, ensuring robust data handling and real-time updates for seamless user experiences.'
+    },
+    {
+      'name': 'UI/UX Design',
+      'description':
+          'Focused on delivering intuitive and user-friendly UI/UX designs, employing Material Design principles and custom animations to enhance user engagement.'
+    },
+    {
+      'name': 'Version Control (Git)',
+      'description':
+          'Experienced in version control with Git, utilizing GitHub for collaboration, code reviews, and managing contributions in team projects.'
+    },
+    {
+      'name': 'Testing and Debugging',
+      'description':
+          'Proficient in writing unit and integration tests using Flutter\'s testing framework, ensuring high code quality and reliability through continuous testing.'
+    },
+    {
+      'name': 'Firebase',
+      'description':
+          'Knowledgeable in using Firebase for backend services, including authentication, Firestore databases, and Cloud Functions, facilitating real-time data sync and storage.'
+    },
+    {
+      'name': 'Responsive Web Design',
+      'description':
+          'Experienced in developing responsive web applications using Flutter Web, ensuring optimal performance and user experiences across various screen sizes.'
+    },
+    {
+      'name': 'Agile Development',
+      'description':
+          'Familiar with Agile methodologies and tools like Jira, facilitating iterative development and fostering collaboration within cross-functional teams.'
+    },
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Skills'),
+        backgroundColor: Theme.of(context).primaryColor,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'My Skills',
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Theme.of(context).colorScheme.secondary,
+                fontFamily: 'Roboto',
+              ),
+            ),
+            const SizedBox(height: 10),
+            Expanded(
+              child: ListView.builder(
+                itemCount: skills.length,
+                itemBuilder: (context, index) {
+                  return Card(
+                    elevation: 2,
+                    margin: const EdgeInsets.symmetric(vertical: 8),
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            skills[index]['name']!,
+                            style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).colorScheme.primary,
+                              fontFamily: 'Roboto',
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            skills[index]['description']!,
+                            style: TextStyle(
+                              fontSize: 16,
+                              color:
+                                  Theme.of(context).textTheme.bodyLarge?.color,
+                              fontFamily: 'Roboto',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ContactPage extends StatelessWidget {
+  const ContactPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Contact'),
+        backgroundColor: Theme.of(context).primaryColor,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Get in Touch',
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Theme.of(context).colorScheme.secondary,
+                fontFamily: 'Roboto',
+              ),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              'Feel free to reach out to me via email or connect with me on LinkedIn.',
+              style: TextStyle(
+                fontSize: 18,
+                color: Theme.of(context).textTheme.bodyLarge?.color,
+                fontFamily: 'Roboto',
+              ),
+            ),
+            const SizedBox(height: 20),
           ],
         ),
       ),
